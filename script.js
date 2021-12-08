@@ -5,13 +5,8 @@ const user = {}
 
 for ( i = 0; i <= 10; i++) {
     
-    var name = prompt('Введите свое имя');
-    var age = +prompt('Введите свой возраст');
-
-     for (const key in user) {
-        console.log(`Данные ${i}-го пользовалетеля ${user[key]}`)
-    }
-        
+    let name = prompt('Введите свое имя');
+    let age = +prompt('Введите свой возраст');
         user[i] = {
             name: name,
             age: age
@@ -20,5 +15,8 @@ for ( i = 0; i <= 10; i++) {
 }
 
 
-
-
+for (const key in user) {
+    for(const newKey in user[key]){
+        console.log(`Пользователь ${key} данные пользовалетеля ${user[key][newKey]}`)
+    }
+}
