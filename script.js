@@ -16,7 +16,8 @@ for ( i = 0; i <= 10; i++) {
 
 
 for (const key in user) {
+    console.log(`Пользователь ${key}`);
     for(const newKey in user[key]){
-        console.log(`Пользователь ${key} данные пользовалетеля ${user[key][newKey]}`)
+        console.log(` данные пользовалетеля ${user[key][newKey]}`)
     }
 }
